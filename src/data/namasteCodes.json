@@ -1,0 +1,72 @@
+[
+  {
+    "code": "NAM001",
+    "description": "Essential Hypertension",
+    "icdMapping": "I10",
+    "category": "Cardiovascular",
+    "confidence": 95
+  },
+  {
+    "code": "NAM002", 
+    "description": "Type 2 Diabetes Mellitus",
+    "icdMapping": "E11",
+    "category": "Endocrine",
+    "confidence": 92
+  },
+  {
+    "code": "NAM003",
+    "description": "Chronic Kidney Disease",
+    "icdMapping": "N18.6",
+    "category": "Renal",
+    "confidence": 88
+  },
+  {
+    "code": "NAM004",
+    "description": "Acute Myocardial Infarction",
+    "icdMapping": "I21.9",
+    "category": "Cardiovascular",
+    "confidence": 98
+  },
+  {
+    "code": "NAM005",
+    "description": "Chronic Obstructive Pulmonary Disease",
+    "icdMapping": "J44.1",
+    "category": "Respiratory",
+    "confidence": 94
+  },
+  {
+    "code": "NAM006",
+    "description": "Bronchial Asthma",
+    "icdMapping": "J45.9",
+    "category": "Respiratory",
+    "confidence": 91
+  },
+  {
+    "code": "NAM007",
+    "description": "Rheumatoid Arthritis",
+    "icdMapping": "M06.9",
+    "category": "Musculoskeletal",
+    "confidence": 89
+  },
+  {
+    "code": "NAM008",
+    "description": "Gastroesophageal Reflux Disease",
+    "icdMapping": "K21.9",
+    "category": "Digestive",
+    "confidence": 86
+  },
+  {
+    "code": "NAM009",
+    "description": "Major Depressive Disorder",
+    "icdMapping": "F32.9",
+    "category": "Mental Health",
+    "confidence": 93
+  },
+  {
+    "code": "NAM010",
+    "description": "Migraine Headache",
+    "icdMapping": "G43.9",
+    "category": "Neurological",
+    "confidence": 87
+  }
+]

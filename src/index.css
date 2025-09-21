@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TRISVARA Design System - Harmonizing Tradition with Global Health */
+
+@layer base {
+  :root {
+    /* TRISVARA Color Palette */
+    --background: 42 25% 98%;
+    --foreground: 180 100% 6%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 180 100% 6%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 180 100% 6%;
+
+    /* Deep Teal Primary */
+    --primary: 180 100% 15%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 180 70% 25%;
+
+    /* Herbal Green Secondary */
+    --secondary: 168 57% 42%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* Saffron Accent */
+    --accent: 30 100% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Muted tones */
+    --muted: 42 15% 96%;
+    --muted-foreground: 180 20% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 42 20% 90%;
+    --input: 42 15% 94%;
+    --ring: 180 100% 15%;
+
+    --radius: 0.75rem;
+
+    /* Custom TRISVARA tokens */
+    --teal-deep: 180 100% 15%;
+    --teal-medium: 180 70% 25%;
+    --teal-light: 180 50% 85%;
+    --green-herbal: 168 57% 42%;
+    --green-light: 168 40% 85%;
+    --saffron: 30 100% 60%;
+    --saffron-light: 30 80% 90%;
+    --off-white: 42 25% 98%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--teal-deep)), hsl(var(--teal-medium)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--green-herbal)), hsl(var(--teal-medium)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--saffron)), hsl(var(--green-herbal)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--off-white)), hsl(var(--muted)));
+
+    /* Shadows - Neumorphic Design */
+    --shadow-neumorphic: 0 8px 32px -8px hsl(var(--teal-deep) / 0.1), 
+                         0 2px 8px -2px hsl(var(--teal-deep) / 0.05);
+    --shadow-elevated: 0 12px 48px -12px hsl(var(--teal-deep) / 0.15),
+                       0 4px 16px -4px hsl(var(--teal-deep) / 0.1);
+    --shadow-glow: 0 0 40px hsl(var(--teal-medium) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .dark {
+    --background: 180 100% 4%;
+    --foreground: 42 25% 98%;
+
+    --card: 180 50% 8%;
+    --card-foreground: 42 25% 95%;
+
+    --popover: 180 50% 8%;
+    --popover-foreground: 42 25% 95%;
+
+    --primary: 168 57% 45%;
+    --primary-foreground: 180 100% 4%;
+
+    --secondary: 180 30% 15%;
+    --secondary-foreground: 42 25% 95%;
+
+    --muted: 180 30% 12%;
+    --muted-foreground: 42 15% 65%;
+
+    --accent: 30 100% 65%;
+    --accent-foreground: 180 100% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 42 25% 98%;
+
+    --border: 180 30% 18%;
+    --input: 180 30% 15%;
+    --ring: 168 57% 45%;
+
+    /* Dark mode TRISVARA tokens */
+    --teal-deep: 180 80% 25%;
+    --teal-medium: 180 60% 35%;
+    --teal-light: 180 40% 20%;
+    --green-herbal: 168 50% 45%;
+    --green-light: 168 30% 25%;
+    --saffron: 30 90% 65%;
+    --saffron-light: 30 60% 25%;
+    --off-white: 180 20% 8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-source;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground;
+  }
+
+  /* Focus outline for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+
+  /* Improve text rendering */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Sanskrit pattern background helper */
+  .bg-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23014D4D' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
